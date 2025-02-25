@@ -58,7 +58,7 @@
     <div class="container" style="column-count: 2;column-rule: #ccc;">
         <div class="container">
             <p>
-                Put buttons here
+                Put buttons here ALSO EVERYTHING IN THIS SECTION OF THE HTML IS REALLY BADLY DONE AND NEEDS TO BE CHANGED IT SHOULD BE ITS OWN DIV CATEGORY
             </p>
             <p>Location</p>
             <p>Graduation Year</p>
@@ -84,13 +84,21 @@
                     <option>Any Region</option>
                 </select>
                 
-                <label for="year">Graduation Year</label>
-                <input type="text" id="year" placeholder="Enter Year">
+                <br>
+
+                <label for="year">FROM</label>
+                <input type="text" id="startyear" placeholder="Enter Year">
+                <label for="year">TO</label>
+                <input type="text" id="endyear" placeholder="Enter Year">
                 
+                <br>
+
                 <label for="industry">Industry & Sector</label>
                 <select id="industry">
                     <option>Any Industry</option>
                 </select>
+
+                <br>
                 
                 <label for="gender">Gender</label>
                 <select id="gender">
@@ -100,11 +108,14 @@
                     <option>Non-binary</option>
                 </select>
                 
+
                 <label for="ethnicity">Ethnicity</label>
                 <select id="ethnicity">
                     <option>Select all that apply</option>
                 </select>
                 
+                <br>
+
                 <button type="button" class="search-btn">Search</button>
             </form>
         </div>
