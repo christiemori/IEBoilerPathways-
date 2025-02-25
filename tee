@@ -93,7 +93,7 @@
                 
                 <br>
 
-                <label for="industry">Industry & Sector</label>
+                <label for="industry">Industry</label>
                 <select id="industry">
                     <option>Any Industry</option>
                 </select>
