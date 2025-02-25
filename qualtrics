@@ -1,0 +1,146 @@
+import requests
+import time
+import mysql.connector
+import os
+import csv
+import pandas as pd
+import chardet
+import zipfile
+
+
+# NEED TO ADD AUTOMATION
+# NEED TO ADD HOW TO DEAL WITH REPEATS (can we j add this directly into the survey)
+
+# DOWNLOAD CSV FILE LOCALLY
+
+api_token = "B1FivV6LnbHKTZ2rv5dgThlNLFKTqvCuwJQts91Y"  
+survey_id = "SV_8Guyx4VRskVJZum"  
+data_center = "yul1" 
+file_format = "csv"  
+
+base_url = f"https://purdue.ca1.qualtrics.com/API/v3/responseexports"
+
+headers = {
+    "content-type": "application/json",
+    "x-api-token": api_token,
+}
+
+payload = {
+    "format": file_format,
+    "surveyId": survey_id,
+}
+
+
+print("Initiating export job...")
+create_response = requests.post(base_url, json=payload, headers=headers)
+create_response.raise_for_status()  
+response_json = create_response.json()
+
+progress_id = response_json["result"]["id"]
+print(f"Export job started. Progress ID: {progress_id}")
+
+progress_url = f"{base_url}/{progress_id}"
+status = ""
+while True:
+    progress_response = requests.get(progress_url, headers=headers)
+    progress_response.raise_for_status()
+    progress_json = progress_response.json()
+    status = progress_json["result"]["status"]
+    print("Current export status: " + status)
+    if status == "complete":
+        break
+    time.sleep(5)  
+
+file_url = progress_json["result"]["file"]
+print("Export complete. Downloading file from:", file_url)
+
+download_response = requests.get(file_url, headers=headers)
+download_response.raise_for_status()
+
+output_file = "qualtrics_export.zip"
+with open(output_file, "wb") as f:
+    f.write(download_response.content)
+
+print(f"Data successfully downloaded and saved as '{output_file}'")
+
+extracted_folder = './extracted_csv/'
+
+os.makedirs(extracted_folder, exist_ok=True)
+
+with zipfile.ZipFile(output_file, 'r') as zip_ref:
+    zip_ref.extractall(extracted_folder)
+
+extracted_files = os.listdir(extracted_folder)
+print("Extracted files:", extracted_files)
+
+csv_file_path = os.path.join(extracted_folder, 'Studnet dummy.csv')
+df_extracted = pd.read_csv(csv_file_path, encoding='ISO-8859-1', skiprows=2)
+
+# CLEAN UP DATA
+df_extracted.columns = [
+    'ResponseID', 'ResponseSet', 'IPAddress', 'StartDate', 'EndDate',
+    'RecipientLastName', 'RecipientFirstName', 'RecipientEmail',
+    'ExternalDataReference', 'Finished', 'Status', 'Q1', 'Q2', 'Q3', 'Q4',
+    'Q5', 'Q6', 'Q7', 'Q8', 'LocationLatitude', 'LocationLongitude', 'LocationAccuracy'
+]
+
+df_mapped = df_extracted[[
+    'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'
+]].copy()
+
+df_mapped.columns = [
+    'PUID', 'School Email', 'First Name', 'Last Name',
+    'Mentorship Is Interested', 'Graduation Date',
+    'Resume URL', 'Post Grad Plans'
+]
+
+# LOAD DATA INTO SQL
+
+db_config = {
+    "host": "mysql.ecn.purdue.edu", 
+    "user": "ie_pathways",
+    "password": "Final-Four-Bound-128!",
+    "database": "ie_pathways"
+}
+
+try:
+    conn = mysql.connector.connect(**db_config)
+    cursor = conn.cursor()
+    print("Connected to MySQL")
+except mysql.connector.Error as err:
+    print("Error connecting to MySQL:", err)
+    exit(1)
+
+insert_query = """
+INSERT INTO ie_pathways.Student (
+    puid, school_email, first_name, last_name, 
+    mentorship_is_interested, graduation_date, resume_url, post_grad_plan
+)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+"""
+
+row_count = 0
+for index, row in df_mapped.iterrows():
+    data_tuple = (
+        row["PUID"], 
+        row["School Email"], 
+        row["First Name"], 
+        row["Last Name"], 
+        row["Mentorship Is Interested"], 
+        row["Graduation Date"], 
+        row["Resume URL"], 
+        row["Post Grad Plans"]
+    )
+    try:
+        cursor.execute(insert_query, data_tuple)
+        row_count += 1
+    except mysql.connector.Error as err:
+        print(f"Error inserting row {index}: {err}")
+
+conn.commit()
+
+print(f"Inserted {row_count} rows into the 'Student' table.")
+
+cursor.close()
+conn.close()
+print("Database connection closed.")
