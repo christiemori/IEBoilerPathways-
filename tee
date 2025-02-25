@@ -48,6 +48,10 @@
         .search-btn:hover {
             background-color: #5a4523;
         }
+        p {
+            background-color: #ccc;
+            padding: auto;
+        }
     </style>
 </head>
 <body>
@@ -56,15 +60,13 @@
             <p>
                 Put buttons here
             </p>
-            <p>
-                Location
-                Graduation Year
-                Industry & Sector
-                Demographics
-                Degree Specifics
-                Interests
-                Name
-            </p>
+            <p>Location</p>
+            <p>Graduation Year</p>
+            <p>Industry & Sector</p>
+            <p>Demographics</p>
+            <p>Degree Specifics</p>
+            <p>Interests</p>
+            <p>Name</p>
         </div>
         <div class="container">
             <h1>IE Boiler Pathways Search Tool</h1>
