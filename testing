@@ -12,6 +12,12 @@
     <main>
         <h1>IE Boiler Pathways</h1>  
     </main>
+    <form>
+      <label for="country">COUNTRY</label><br>
+      <input type="text" id="country" name="country"><br>
+      <label for="region">REGION</label><br>
+      <input type="text" id="region" name="region">
+    </form>
     <script src="index.js"></script>
   </body>
 </html>
