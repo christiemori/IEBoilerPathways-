@@ -52,45 +52,60 @@
 </head>
 <body>
     <div class="container" style="column-count: 2;column-rule: #ccc;">
-        
-        <h1>IE Boiler Pathways Search Tool</h1>
-        <form style="column-count: 3;column-rule: #ccc;">
-            <label for="country">Country</label>
-            <select id="country">
-                <option>Any Country</option>
-                <option>USA</option>
-                <option>Spain</option>
-                <option>Brazil</option>
-            </select>
-            
-            <label for="region">Region</label>
-            <select id="region">
-                <option>Any Region</option>
-            </select>
-            
-            <label for="year">Graduation Year</label>
-            <input type="text" id="year" placeholder="Enter Year">
-            
-            <label for="industry">Industry & Sector</label>
-            <select id="industry">
-                <option>Any Industry</option>
-            </select>
-            
-            <label for="gender">Gender</label>
-            <select id="gender">
-                <option>Select</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Non-binary</option>
-            </select>
-            
-            <label for="ethnicity">Ethnicity</label>
-            <select id="ethnicity">
-                <option>Select all that apply</option>
-            </select>
-            
-            <button type="button" class="search-btn">Search</button>
-        </form>
+        <div class="container">
+            <p>
+                Put buttons here
+            </p>
+            <p>
+                Location
+                Graduation Year
+                Industry & Sector
+                Demographics
+                Degree Specifics
+                Interests
+                Name
+            </p>
+        </div>
+        <div class="container">
+            <h1>IE Boiler Pathways Search Tool</h1>
+            <form style="column-count: 3;column-rule: #ccc;">
+                <label for="country">Country</label>
+                <select id="country">
+                    <option>Any Country</option>
+                    <option>USA</option>
+                    <option>Spain</option>
+                    <option>Brazil</option>
+                </select>
+                
+                <label for="region">Region</label>
+                <select id="region">
+                    <option>Any Region</option>
+                </select>
+                
+                <label for="year">Graduation Year</label>
+                <input type="text" id="year" placeholder="Enter Year">
+                
+                <label for="industry">Industry & Sector</label>
+                <select id="industry">
+                    <option>Any Industry</option>
+                </select>
+                
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Non-binary</option>
+                </select>
+                
+                <label for="ethnicity">Ethnicity</label>
+                <select id="ethnicity">
+                    <option>Select all that apply</option>
+                </select>
+                
+                <button type="button" class="search-btn">Search</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
