@@ -11,6 +11,7 @@
             margin: 20px;
         }
         .container {
+            column-count: 3;
             background: white;
             padding: 20px;
             border-radius: 8px;
