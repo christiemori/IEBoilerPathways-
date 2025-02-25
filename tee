@@ -53,7 +53,7 @@
 <body>
     <div class="container">
         <h1>IE Boiler Pathways Search Tool</h1>
-        <form style="column-count: 3;column-width: 40;">
+        <form style="column-count: 3;column-width: 33%;">
             <label for="country">Country</label>
             <select id="country">
                 <option>Any Country</option>
