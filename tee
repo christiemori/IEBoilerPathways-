@@ -51,10 +51,10 @@
     </style>
 </head>
 <body>
-    <div class="container" style="column-count: 2;column-width: 20em;">
+    <div class="container" style="column-count: 2;column-rule: #ccc;">
         
         <h1>IE Boiler Pathways Search Tool</h1>
-        <form style="column-count: 3;column-width: 10em;">
+        <form style="column-count: 3;column-rule: #ccc;column">
             <label for="country">Country</label>
             <select id="country">
                 <option>Any Country</option>
