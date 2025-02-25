@@ -11,7 +11,6 @@
             margin: 20px;
         }
         .container {
-            column-count: 3;
             background: white;
             padding: 20px;
             border-radius: 8px;
@@ -54,7 +53,7 @@
 <body>
     <div class="container">
         <h1>IE Boiler Pathways Search Tool</h1>
-        <form>
+        <form style="column-count: 3;">
             <label for="country">Country</label>
             <select id="country">
                 <option>Any Country</option>
