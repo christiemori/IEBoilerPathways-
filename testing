@@ -28,6 +28,7 @@
             padding: 1em;
             font-size: medium;
             margin: 10px 0;
+            text-align: right;
         }
         .form-container {
             width: 60%;
