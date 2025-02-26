@@ -82,6 +82,8 @@
     <div class="container">
         <div class="sidebar">
           <div class="container">
+            <img src="/icons/close-icon.png">
+            <img src="/icons/search-menu-icon.png">
             <button type="button" class="search-btn">Search</button>
           </div>
             <p>Location</p>
