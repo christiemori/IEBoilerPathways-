@@ -22,7 +22,7 @@
             align-items: flex-start; /* Ensures sidebar and form align at the top */
         }
         .sidebar {
-            width: 20%;
+            width: 30%;
             padding-right: 20px;
         }
         .sidebar p {
@@ -34,7 +34,7 @@
             text-align: right;
         }
         .form-container {
-            width: 80%;
+            width: 70%;
             row-gap: 0.5em;
         }
         h1 {
@@ -54,6 +54,7 @@
             background-color: #f2f2f2;
             padding: 0.5em;
             gap: 10px;
+            margin-bottom: 10px;
         }
         .form-row div {
             flex: 1;
@@ -189,11 +190,11 @@
                         </select>
                 </div>
                 <div class="form-row">
-                        <input type="checkbox" id="2wm">                 
+                        <input type="checkbox" id="2wm" width="20px">                 
                         <label for="2wm">2-Way Mentoring</label>
-                        <input type="checkbox" id="speaking">
+                        <input type="checkbox" id="speaking" width="20px">
                         <label for="speaking">Guest Speaking</label>
-                        <input type="checkbox" id="project">
+                        <input type="checkbox" id="project" width="20px">
                         <label for="project">IE 431 / Senior Design</label>
                 </div>
             </form>
