@@ -40,7 +40,7 @@
         h1 {
             background-color: #CFB991;
             text-align: left;
-            padding: 1.5em;
+            padding: 0.5em;
             font-size: larger;
             margin-bottom: 20px; /* Adds spacing below the title */
         }
