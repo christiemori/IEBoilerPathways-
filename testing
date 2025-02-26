@@ -35,6 +35,7 @@
         h1 {
           background-color: #CFB991;
             text-align: left;
+            padding: 1em;
             font-size: larger;
         }
         label {
