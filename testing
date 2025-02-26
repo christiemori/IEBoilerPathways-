@@ -94,10 +94,11 @@
             <h1>IE Boiler Pathways Search Tool</h1>
             <form>
                 <div class="form-row">
+                    <label for="country">COUNTRY</label>
                         <select id="country">
                             <option>Any Country</option>
                         </select>
-                        <label for="region">OR</label>
+                        <label for="region">REGION</label>
                         <select id="region">
                             <option>Any Region</option>
                         </select>
@@ -110,18 +111,18 @@
                         <input type="text" id="endyear" placeholder="End Year">
                 </div>
               <div class="form-row">
-                <label for="industry">Industry</label>
+                <label for="industry">INDUSTRY</label>
                 <select id="industry">
                     <option>Any Industry</option>
                 </select>
-                <label for="sector">Sector</label>
+                <label for="sector">SECTOR</label>
                 <select id="sector>">
                   <option>Any Sector</option>>
                 </select>
               </div>
 
               <div class="form-row">
-                <label for="gender">Gender</label>
+                <label for="gender">GENDER</label>
                 <select id="gender">
                     <option>Select</option>
                     <option>Male</option>
@@ -129,7 +130,7 @@
                     <option>Non-binary</option>
                 </select>
 
-                <label for="ethnicity">Ethnicity</label>
+                <label for="ethnicity">ETHNICITY</label>
                 <select id="ethnicity">
                     <option>Select all that apply</option>
                 </select>
