@@ -189,17 +189,11 @@
                         </select>
                 </div>
                 <div class="form-row">
-                        <select id="2wm">
-                            <option>Y</option>
-                        </select>                    
+                        <input type="checkbox" id="2wm">                 
                         <label for="2wm">2-Way Mentoring</label>
-                        <select id="speaking">
-                            <option>Y</option>
-                        </select>
+                        <input type="checkbox" id="speaking">
                         <label for="speaking">Guest Speaking</label>
-                        <select id="project">
-                            <option>Y</option>
-                        </select>
+                        <input type="checkbox" id="project">
                         <label for="project">IE 431 / Senior Design</label>
                 </div>
             </form>
