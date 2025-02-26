@@ -35,7 +35,7 @@
         h1 {
           background-color: #CFB991;
             text-align: left;
-            font-size: large;
+            font-size: larger;
         }
         label {
             font-weight: bold;
