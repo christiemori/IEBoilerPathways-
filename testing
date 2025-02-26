@@ -1,26 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    body {background-color: white;}
-    h1   {color: gold;}
-    p    {color: darkgray;}
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IE Boiler Pathways</title>
-    <link rel="stylesheet" href="style/headings.scss">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h1>IE Boiler Pathways</h1>  
-    </main>
-    <form>
-      <label for="country">COUNTRY</label><br>
-      <input type="text" id="country" name="country"><br>
-      <label for="region">REGION</label><br>
-      <input type="text" id="region" name="region">
-    </form>
-    <script src="index.js"></script>
-  </body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        .sidebar {
+            width: 40%;
+            padding-right: 20px;
+        }
+        .sidebar p {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .form-container {
+            width: 60%;
+        }
+        h1 {
+            color: #6d542d;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+        .form-row div {
+            flex: 1;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-btn {
+            background-color: #6d542d;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            margin-top: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .search-btn:hover {
+            background-color: #5a4523;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <p>Location</p>
+            <p>Graduation Year</p>
+            <p>Industry & Sector</p>
+            <p>Demographics</p>
+            <p>Degree Specifics</p>
+            <p>Interests</p>
+            <p>Name</p>
+        </div>
+        <div class="form-container">
+            <h1>IE Boiler Pathways Search Tool</h1>
+            <form>
+                <div class="form-row">
+                    <div>
+                        <label for="country">Country</label>
+                        <select id="country">
+                            <option>Any Country</option>
+                            <option>USA</option>
+                            <option>Spain</option>
+                            <option>Brazil</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="region">Region</label>
+                        <select id="region">
+                            <option>Any Region</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="startyear">FROM</label>
+                        <input type="text" id="startyear" placeholder="Enter Year">
+                    </div>
+                    <div>
+                        <label for="endyear">TO</label>
+                        <input type="text" id="endyear" placeholder="Enter Year">
+                    </div>
+                </div>
+
+                <label for="industry">Industry</label>
+                <select id="industry">
+                    <option>Any Industry</option>
+                </select>
+
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Non-binary</option>
+                </select>
+
+                <label for="ethnicity">Ethnicity</label>
+                <select id="ethnicity">
+                    <option>Select all that apply</option>
+                </select>
+
+                <button type="button" class="search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+</body>
 </html>

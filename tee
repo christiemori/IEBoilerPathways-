@@ -90,10 +90,10 @@
                 </select>
 
                 <label for="startyear">FROM</label>
-                <input type="text" id="startyear" placeholder="Enter Year">
+                <input type="text" id="startyear" placeholder="Start Year">
                 
                 <label for="endyear">TO</label>
-                <input type="text" id="endyear" placeholder="Enter Year">
+                <input type="text" id="endyear" placeholder="End Year">
 
                 <label for="industry">Industry</label>
                 <select id="industry">
