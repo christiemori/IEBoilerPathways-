@@ -26,6 +26,8 @@
         .sidebar p {
             font-weight: bold;
             background-color: #e1e1e1;
+            padding: 20em;
+            text-size-adjust: 200%;
             margin: 10px 0;
         }
         .form-container {
@@ -33,7 +35,8 @@
         }
         h1 {
           background-color: #CFB991;
-            text-align: center;
+            text-align: left;
+            text-size-adjust: 80%;
         }
         label {
             font-weight: bold;
@@ -74,6 +77,9 @@
 <body>
     <div class="container">
         <div class="sidebar">
+          <div class="container">
+            <button type="button" class="search-btn">Search</button>
+          </div>
             <p>Location</p>
             <p>Graduation Year</p>
             <p>Industry & Sector</p>
@@ -135,8 +141,6 @@
                     <option>Select all that apply</option>
                 </select>
               </div>
-
-                <button type="button" class="search-btn">Search</button>
             </form>
         </div>
     </div>
