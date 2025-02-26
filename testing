@@ -25,7 +25,7 @@
         .sidebar p {
             font-weight: bold;
             background-color: #e1e1e1;
-            padding: 4em;
+            padding: 1em;
             font-size: medium;
             margin: 10px 0;
         }
@@ -45,7 +45,7 @@
         .form-row {
             display: flex;
             background-color: #f2f2f2;
-            padding: 4em;
+            padding: 1em;
             gap: 10px;
         }
         .form-row div {
