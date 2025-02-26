@@ -36,7 +36,7 @@
         h1 {
           background-color: #CFB991;
             text-align: left;
-            padding: 1em;
+            padding: 2em;
             font-size: larger;
         }
         label {
@@ -47,7 +47,7 @@
         .form-row {
             display: flex;
             background-color: #f2f2f2;
-            padding: 1em;
+            padding: 0.5em;
             gap: 10px;
         }
         .form-row div {
@@ -91,7 +91,7 @@
             <p>Name</p>
         </div>
         <div class="form-container">
-            <h1>IE Boiler Pathways Search Tool</h1>
+            <h1>Boiler Pathways Alumni Search</h1>
             <form>
                 <div class="form-row">
                     <label for="country">COUNTRY</label>
