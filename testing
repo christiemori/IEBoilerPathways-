@@ -95,13 +95,12 @@
             <form>
                 <div class="form-row">
                     <div>
-                        <label for="country">Country</label>
                         <select id="country">
                             <option>Any Country</option>
                         </select>
                     </div>
                     <div>
-                        <label for="region">Region</label>
+                        <label for="region">OR</label>
                         <select id="region">
                             <option>Any Region</option>
                         </select>
@@ -109,11 +108,11 @@
                 </div>
 
                 <div class="form-row">
-                    <div style="width: 50%;">
+                    <div>
                         <label for="startyear">FROM</label>
                         <input type="text" id="startyear" placeholder="Start Year">
                     </div>
-                    <div style="width: 50%;">
+                    <div>
                         <label for="endyear">TO</label>
                         <input type="text" id="endyear" placeholder="End Year">
                     </div>
