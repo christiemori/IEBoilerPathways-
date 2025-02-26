@@ -16,7 +16,6 @@
             border-radius: 8px;
             max-width: 800px;
             margin: auto;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             display: flex;
         }
         .sidebar {
@@ -46,6 +45,7 @@
         .form-row {
             display: flex;
             background-color: #f2f2f2;
+            padding: 4em;
             gap: 10px;
         }
         .form-row div {
