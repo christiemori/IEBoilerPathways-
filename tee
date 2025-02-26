@@ -17,6 +17,18 @@
             max-width: 800px;
             margin: auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        .sidebar {
+            width: 40%;
+            padding-right: 20px;
+        }
+        .sidebar p {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .form-container {
+            width: 60%;
         }
         h1 {
             color: #6d542d;
@@ -48,18 +60,11 @@
         .search-btn:hover {
             background-color: #5a4523;
         }
-        p {
-            background-color: #ccc;
-            padding: auto;
-        }
     </style>
 </head>
 <body>
-    <div class="container" style="column-count: 2;column-rule: #ccc;">
-        <div class="container">
-            <p>
-                Put buttons here ALSO EVERYTHING IN THIS SECTION OF THE HTML IS REALLY BADLY DONE AND NEEDS TO BE CHANGED IT SHOULD BE ITS OWN DIV CATEGORY
-            </p>
+    <div class="container">
+        <div class="sidebar">
             <p>Location</p>
             <p>Graduation Year</p>
             <p>Industry & Sector</p>
@@ -68,9 +73,9 @@
             <p>Interests</p>
             <p>Name</p>
         </div>
-        <div class="container">
+        <div class="form-container">
             <h1>IE Boiler Pathways Search Tool</h1>
-            <form style="column-count: 3;column-rule: #ccc;">
+            <form>
                 <label for="country">Country</label>
                 <select id="country">
                     <option>Any Country</option>
@@ -78,28 +83,23 @@
                     <option>Spain</option>
                     <option>Brazil</option>
                 </select>
-                
+
                 <label for="region">Region</label>
                 <select id="region">
                     <option>Any Region</option>
                 </select>
-                
-                <br>
 
-                <label for="year">FROM</label>
+                <label for="startyear">FROM</label>
                 <input type="text" id="startyear" placeholder="Enter Year">
-                <label for="year">TO</label>
-                <input type="text" id="endyear" placeholder="Enter Year">
                 
-                <br>
+                <label for="endyear">TO</label>
+                <input type="text" id="endyear" placeholder="Enter Year">
 
                 <label for="industry">Industry</label>
                 <select id="industry">
                     <option>Any Industry</option>
                 </select>
 
-                <br>
-                
                 <label for="gender">Gender</label>
                 <select id="gender">
                     <option>Select</option>
@@ -107,14 +107,11 @@
                     <option>Female</option>
                     <option>Non-binary</option>
                 </select>
-                
 
                 <label for="ethnicity">Ethnicity</label>
                 <select id="ethnicity">
                     <option>Select all that apply</option>
                 </select>
-                
-                <br>
 
                 <button type="button" class="search-btn">Search</button>
             </form>
