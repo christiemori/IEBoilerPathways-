@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href=”https://www.purdue.edu/purdue/fonts/united-sans/united-sans.css” rel=”stylesheet” />
-    <link href=”https://use.typekit.net/ghc8hdz.css” rel=”stylesheet” />
+    <link href="https://www.purdue.edu/purdue/fonts/united-sans/united-sans.css" rel="stylesheet" />
+    <link href="https://use.typekit.net/ghc8hdz.css" rel="stylesheet" />
     <title>IE Boiler Pathways</title>
     <style>
         body {
@@ -19,6 +19,7 @@
             max-width: 800px;
             margin: auto;
             display: flex;
+            align-items: flex-start; /* Ensures sidebar and form align at the top */
         }
         .sidebar {
             width: 40%;
@@ -37,10 +38,11 @@
             row-gap: 0.5em;
         }
         h1 {
-          background-color: #CFB991;
+            background-color: #CFB991;
             text-align: left;
             padding: 1.5em;
             font-size: larger;
+            margin-bottom: 20px; /* Adds spacing below the title */
         }
         label {
             font-weight: bold;
@@ -52,6 +54,7 @@
             background-color: #f2f2f2;
             padding: 0.5em;
             gap: 10px;
+            margin-bottom: 10px; /* Adds spacing between form rows */
         }
         .form-row div {
             flex: 1;
@@ -82,11 +85,11 @@
 <body>
     <div class="container">
         <div class="sidebar">
-          <div class="container">
-            <img src="/icons/close-icon.png" height="100%">
-            <img src="/icons/search-menu-icon.png" height="100%">
-            <button type="button" class="search-btn">Search</button>
-          </div>
+            <div class="container">
+                <img src="/icons/close-icon.png" height="100%">
+                <img src="/icons/search-menu-icon.png" height="100%">
+                <button type="button" class="search-btn">Search</button>
+            </div>
             <p>Location</p>
             <p>Graduation Year</p>
             <p>Industry & Sector</p>
@@ -99,47 +102,63 @@
             <h1>Boiler Pathways Alumni Search</h1>
             <form>
                 <div class="form-row">
-                    <label for="country">COUNTRY</label>
+                    <div>
+                        <label for="country">COUNTRY</label>
                         <select id="country">
                             <option>Any Country</option>
                         </select>
+                    </div>
+                    <div>
                         <label for="region">REGION</label>
                         <select id="region">
                             <option>Any Region</option>
                         </select>
+                    </div>
                 </div>
 
                 <div class="form-row">
+                    <div>
                         <label for="startyear">FROM</label>
                         <input type="text" id="startyear" placeholder="Start Year">
+                    </div>
+                    <div>
                         <label for="endyear">TO</label>
                         <input type="text" id="endyear" placeholder="End Year">
+                    </div>
                 </div>
-              <div class="form-row">
-                <label for="industry">INDUSTRY</label>
-                <select id="industry">
-                    <option>Any Industry</option>
-                </select>
-                <label for="sector">SECTOR</label>
-                <select id="sector>">
-                  <option>Any Sector</option>>
-                </select>
-              </div>
 
-              <div class="form-row">
-                <label for="gender">GENDER</label>
-                <select id="gender">
-                    <option>Select</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Non-binary</option>
-                </select>
+                <div class="form-row">
+                    <div>
+                        <label for="industry">INDUSTRY</label>
+                        <select id="industry">
+                            <option>Any Industry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="sector">SECTOR</label>
+                        <select id="sector">
+                            <option>Any Sector</option>
+                        </select>
+                    </div>
+                </div>
 
-                <label for="ethnicity">ETHNICITY</label>
-                <select id="ethnicity">
-                    <option>Select all that apply</option>
-                </select>
-              </div>
+                <div class="form-row">
+                    <div>
+                        <label for="gender">GENDER</label>
+                        <select id="gender">
+                            <option>Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Non-binary</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ethnicity">ETHNICITY</label>
+                        <select id="ethnicity">
+                            <option>Select all that apply</option>
+                        </select>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
