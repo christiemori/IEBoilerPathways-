@@ -69,7 +69,7 @@
         .search-btn {
             background-color: #000;
             color: white;
-            padding: none;
+            padding: 0.2em;
             border: none;
             width: 40%;
             margin-top: none;
