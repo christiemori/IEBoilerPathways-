@@ -102,48 +102,35 @@
             <h1>Boiler Pathways Alumni Search</h1>
             <form>
                 <div class="form-row">
-                    <div>
                         <label for="country">COUNTRY</label>
                         <select id="country">
                             <option>Any Country</option>
                         </select>
-                    </div>
-                    <div>
                         <label for="region">REGION</label>
                         <select id="region">
                             <option>Any Region</option>
                         </select>
-                    </div>
                 </div>
 
                 <div class="form-row">
-                    <div>
                         <label for="startyear">FROM</label>
                         <input type="text" id="startyear" placeholder="Start Year">
-                    </div>
-                    <div>
                         <label for="endyear">TO</label>
                         <input type="text" id="endyear" placeholder="End Year">
-                    </div>
                 </div>
 
                 <div class="form-row">
-                    <div>
                         <label for="industry">INDUSTRY</label>
                         <select id="industry">
                             <option>Any Industry</option>
                         </select>
-                    </div>
-                    <div>
                         <label for="sector">SECTOR</label>
                         <select id="sector">
                             <option>Any Sector</option>
                         </select>
-                    </div>
                 </div>
 
                 <div class="form-row">
-                    <div>
                         <label for="gender">GENDER</label>
                         <select id="gender">
                             <option>Select</option>
@@ -151,13 +138,10 @@
                             <option>Female</option>
                             <option>Non-binary</option>
                         </select>
-                    </div>
-                    <div>
                         <label for="ethnicity">ETHNICITY</label>
                         <select id="ethnicity">
                             <option>Select all that apply</option>
                         </select>
-                    </div>
                 </div>
             </form>
         </div>
