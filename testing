@@ -54,7 +54,6 @@
             background-color: #f2f2f2;
             padding: 0.5em;
             gap: 10px;
-            margin-bottom: 10px;
         }
         .form-row div {
             flex: 1;
