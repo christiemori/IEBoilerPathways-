@@ -42,7 +42,7 @@
             text-align: left;
             padding: 0.5em;
             font-size: larger;
-            margin-bottom: 20px; /* Adds spacing below the title */
+            margin-bottom: 20px;
         }
         label {
             font-weight: bold;
@@ -54,7 +54,7 @@
             background-color: #f2f2f2;
             padding: 0.5em;
             gap: 10px;
-            margin-bottom: 10px; /* Adds spacing between form rows */
+            margin-bottom: 10px;
         }
         .form-row div {
             flex: 1;
@@ -86,8 +86,8 @@
     <div class="container">
         <div class="sidebar">
             <div class="container">
-                <img src="/icons/close-icon.png" height="100%">
-                <img src="/icons/search-menu-icon.png" height="100%">
+                <img src="https://img.icons8.com/?size=100&id=43529&format=png&color=000000" height="1em">
+                <img src="https://img.icons8.com/?size=100&id=43719&format=png&color=000000" height="1em">
                 <button type="button" class="search-btn">Search</button>
             </div>
             <p>Location</p>
