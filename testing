@@ -88,9 +88,6 @@
                         <label for="country">Country</label>
                         <select id="country">
                             <option>Any Country</option>
-                            <option>USA</option>
-                            <option>Spain</option>
-                            <option>Brazil</option>
                         </select>
                     </div>
                     <div>
@@ -102,21 +99,27 @@
                 </div>
 
                 <div class="form-row">
-                    <div>
+                    <div style="width: 50%;">
                         <label for="startyear">FROM</label>
-                        <input type="text" id="startyear" placeholder="Enter Year">
+                        <input type="text" id="startyear" placeholder="Start Year">
                     </div>
-                    <div>
+                    <div style="width: 50%;">
                         <label for="endyear">TO</label>
-                        <input type="text" id="endyear" placeholder="Enter Year">
+                        <input type="text" id="endyear" placeholder="End Year">
                     </div>
                 </div>
-
+              <div class="form-row">
                 <label for="industry">Industry</label>
                 <select id="industry">
                     <option>Any Industry</option>
                 </select>
+                <label for="sector">Sector</label>
+                <select id="sector>">
+                  <option>Any Sector</option>>
+                </select>
+              </div>
 
+              <div class="form-row">
                 <label for="gender">Gender</label>
                 <select id="gender">
                     <option>Select</option>
@@ -129,6 +132,7 @@
                 <select id="ethnicity">
                     <option>Select all that apply</option>
                 </select>
+              </div>
 
                 <button type="button" class="search-btn">Search</button>
             </form>
