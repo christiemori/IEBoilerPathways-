@@ -27,7 +27,7 @@
             font-weight: bold;
             background-color: #e1e1e1;
             padding: 20em;
-            text-size-adjust: 200%;
+            font-size: medium;
             margin: 10px 0;
         }
         .form-container {
@@ -36,7 +36,7 @@
         h1 {
           background-color: #CFB991;
             text-align: left;
-            text-size-adjust: 80%;
+            font-size: large;
         }
         label {
             font-weight: bold;
