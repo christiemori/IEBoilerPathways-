@@ -22,7 +22,7 @@
             align-items: flex-start; /* Ensures sidebar and form align at the top */
         }
         .sidebar {
-            width: 40%;
+            width: 20%;
             padding-right: 20px;
         }
         .sidebar p {
@@ -34,7 +34,7 @@
             text-align: right;
         }
         .form-container {
-            width: 60%;
+            width: 80%;
             row-gap: 0.5em;
         }
         h1 {
