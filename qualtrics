@@ -13,7 +13,7 @@ import zipfile
 
 # DOWNLOAD CSV FILE LOCALLY
 
-api_token = "B1FivV6LnbHKTZ2rv5dgThlNLFKTqvCuwJQts91Y"  
+api_token = "API"  
 survey_id = "SV_8Guyx4VRskVJZum"  
 data_center = "yul1" 
 file_format = "csv"  
