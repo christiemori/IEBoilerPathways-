@@ -3,41 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IE Boiler Pathways</title>
+    <link href="https://www.purdue.edu/purdue/fonts/united-sans/united-sans.css" rel="stylesheet" />
+    <link href="https://use.typekit.net/ghc8hdz.css" rel="stylesheet" />
+    <title>Boiler Pathways Alumni Search</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: Acumin Pro, sans-serif;
+            background-color: white;
             margin: 20px;
         }
         .container {
             background: white;
             padding: 20px;
             border-radius: 8px;
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             display: flex;
+            align-items: flex-start;
         }
         .sidebar {
-            width: 40%;
+            width: 30%;
             padding-right: 20px;
         }
         .sidebar p {
             font-weight: bold;
+            background-color: #e1e1e1;
+            padding: 1em;
+            font-size: medium;
             margin: 10px 0;
+            text-align: right;
         }
         .form-container {
-            width: 60%;
+            width: 70%;
+            row-gap: 0.5em;
         }
         h1 {
-            color: #6d542d;
-            text-align: center;
+            background-color: #CFB991;
+            text-align: left;
+            padding: 0.5em;
+            font-size: larger;
+            margin-bottom: 20px;
         }
         label {
             font-weight: bold;
             display: block;
             margin-top: 10px;
+        }
+        .form-row {
+            display: flex;
+            background-color: #f2f2f2;
+            padding: 0.4em;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .form-row div {
+            flex: 1;
         }
         select, input {
             width: 100%;
@@ -47,73 +67,136 @@
             border-radius: 4px;
         }
         .search-btn {
-            background-color: #6d542d;
+            background-color: #000;
             color: white;
-            padding: 10px;
+            padding: 0.2em;
             border: none;
-            width: 100%;
-            margin-top: 15px;
-            font-size: 16px;
+            width: 40%;
+            margin-top: none;
+            font-size: medium;
             cursor: pointer;
             border-radius: 4px;
         }
         .search-btn:hover {
-            background-color: #5a4523;
+            background-color: #000;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="sidebar">
+            <div class="container">
+                <img src="https://img.icons8.com/?size=100&id=43529&format=png&color=000000" height="20px">
+                <span style="width: 40%;"></span>
+                <img src="https://img.icons8.com/?size=100&id=43719&format=png&color=000000" height="20px">
+                <span style="width: 10%;"></span>
+                <button type="button" class="search-btn">SEARCH</button>
+            </div>
             <p>Location</p>
             <p>Graduation Year</p>
             <p>Industry & Sector</p>
             <p>Demographics</p>
-            <p>Degree Specifics</p>
+            <p>                
+                <img src="https://img.icons8.com/?size=100&id=45330&format=png&color=000000" height="20px">
+                Degree Specifics</p>
+            <p>Undergraduate</p>
+            <p>Graduate</p>
+            <p>Professional</p>
             <p>Interests</p>
             <p>Name</p>
         </div>
         <div class="form-container">
-            <h1>IE Boiler Pathways Search Tool</h1>
+            <h1>Boiler Pathways Alumni Search</h1>
             <form>
-                <label for="country">Country</label>
-                <select id="country">
-                    <option>Any Country</option>
-                    <option>USA</option>
-                    <option>Spain</option>
-                    <option>Brazil</option>
-                </select>
+                <div class="form-row">
+                        <label for="country">COUNTRY</label>
+                        <select id="country">
+                            <option>Any Country</option>
+                        </select>
+                        <label for="region">REGION</label>
+                        <select id="region">
+                            <option>Any Region</option>
+                        </select>
+                </div>
 
-                <label for="region">Region</label>
-                <select id="region">
-                    <option>Any Region</option>
-                </select>
+                <div class="form-row">
+                        <label for="startyear">FROM</label>
+                        <input type="text" id="startyear" placeholder="Start Year">
+                        <label for="endyear">TO</label>
+                        <input type="text" id="endyear" placeholder="End Year">
+                </div>
 
-                <label for="startyear">FROM</label>
-                <input type="text" id="startyear" placeholder="Start Year">
-                
-                <label for="endyear">TO</label>
-                <input type="text" id="endyear" placeholder="End Year">
+                <div class="form-row">
+                        <label for="industry">INDUSTRY</label>
+                        <select id="industry">
+                            <option>Any Industry</option>
+                        </select>
+                        <label for="sector">SECTOR</label>
+                        <select id="sector">
+                            <option>Any Sector</option>
+                        </select>
+                </div>
 
-                <label for="industry">Industry</label>
-                <select id="industry">
-                    <option>Any Industry</option>
-                </select>
-
-                <label for="gender">Gender</label>
-                <select id="gender">
-                    <option>Select</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Non-binary</option>
-                </select>
-
-                <label for="ethnicity">Ethnicity</label>
-                <select id="ethnicity">
-                    <option>Select all that apply</option>
-                </select>
-
-                <button type="button" class="search-btn">Search</button>
+                <div class="form-row">
+                        <label for="gender">GENDER</label>
+                        <select id="gender">
+                            <option>Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Non-binary</option>
+                        </select>
+                        <label for="ethnicity">ETHNICITY</label>
+                        <select id="ethnicity">
+                            <option>Select all that apply</option>
+                        </select>
+                </div>
+                <div class="form-row">
+                    <p>&nbsp;</p>
+                </div>
+                <div class="form-row">
+                    <label for="degree1">DEGREE</label>
+                        <select id="degree1">
+                            <option>Type to search</option>
+                        </select>
+                        <label for="school1">SCHOOL</label>
+                        <select id="school1">
+                            <option>Type to search</option>
+                        </select>
+                </div>
+                <div class="form-row">
+                    <label for="level1">LEVEL</label>
+                    <select id="level1">
+                        <option>Master's</option>
+                        <option>PhD</option>
+                        <option>Other (type)</option>
+                    </select>
+                    <label for="degree2">DEGREE</label>
+                        <select id="degree2">
+                            <option>Type to search</option>
+                        </select>
+                        <label for="school2">SCHOOL</label>
+                        <select id="school2">
+                            <option>Type to search</option>
+                        </select>
+                </div>
+                <div class="form-row">
+                    <label for="degree3">DEGREE</label>
+                        <select id="degree3">
+                            <option>Type to search</option>
+                        </select>
+                        <label for="school3">SCHOOL</label>
+                        <select id="school3">
+                            <option>Type to search</option>
+                        </select>
+                </div>
+                <div class="form-row">
+                        <input type="checkbox" id="2wm" height="20px">                 
+                        <label for="2wm">2-Way Mentoring</label>
+                        <input type="checkbox" id="speaking" height="20px">
+                        <label for="speaking">Guest Speaking</label>
+                        <input type="checkbox" id="project" height="20px">
+                        <label for="project">IE 431 / Senior Design</label>
+                </div>
             </form>
         </div>
     </div>
