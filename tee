@@ -81,9 +81,11 @@
             background-color: #000;
         }
         input[type="checkbox"] {
-            transform: scale(0.95);
+            transform: scale(0.5);
+            width: 12px;
+            height: 12px;
             margin-right: 5px;
-}
+        }
     </style>
 </head>
 <body>
@@ -200,6 +202,11 @@
                         <label for="speaking">Guest Speaking</label>
                         <input type="checkbox" id="project" height="10px">
                         <label for="project">IE 431 / Senior Design</label>
+                </div>
+                <div class="form-row">
+                        <label for="nameSearch">NAME</label>
+                        <input type="text" id="nameSearch" placeholder="Enter name">
+                        <button type="button" class="search-btn" onclick="searchByName()">SEARCH</button>
                 </div>
             </form>
         </div>
