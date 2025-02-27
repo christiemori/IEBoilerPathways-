@@ -194,7 +194,7 @@
                         </select>
                 </div>
                 <div class="form-row">
-                        <input type="checkbox" id="2wm" height="10px">                 
+                        <input type="checkbox" id="2wm" height="20px">                 
                         <label for="2wm">2-Way Mentoring</label>
                         <input type="checkbox" id="speaking" height="10px">
                         <label for="speaking">Guest Speaking</label>
