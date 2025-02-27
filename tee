@@ -52,12 +52,15 @@
         .form-row {
             display: flex;
             background-color: #f2f2f2;
+            align-items: center;
             padding: 0.4em;
             gap: 10px;
             margin-bottom: 10px;
         }
         .form-row div {
             flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         select, input {
             width: 100%;
@@ -85,6 +88,11 @@
             width: 12px;
             height: 12px;
             margin-right: 5px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
     </style>
 </head>
@@ -209,7 +217,7 @@
                             <option>Type to search</option>
                         </select>
                 </div>
-                <div class="form-row">
+                <div class="form-row checkbox-container">
                         <input type="checkbox" id="2wm" height="20px">                 
                         <label for="2wm">2-Way Mentoring</label>
                         <input type="checkbox" id="speaking" height="10px">
@@ -220,7 +228,6 @@
                 <div class="form-row">
                         <label for="nameSearch">NAME</label>
                         <input type="text" id="nameSearch" placeholder="Enter name">
-                        <button type="button" class="search-btn" onclick="searchByName()">SEARCH</button>
                 </div>
             </form>
         </div>
