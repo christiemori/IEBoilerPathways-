@@ -126,10 +126,16 @@
                         <label for="country">COUNTRY</label>
                         <select id="country">
                             <option>Any Country</option>
+                            <option>United States of America</option>
                         </select>
                         <label for="region">REGION</label>
                         <select id="region">
                             <option>Any Region</option>
+                            <option>Midwest</option>
+                            <option>Northeast</option>
+                            <option>Southeast</option>
+                            <option>Southwest</option>
+                            <option>West</option>
                         </select>
                 </div>
 
