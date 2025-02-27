@@ -136,6 +136,12 @@
                         <label for="industry">INDUSTRY</label>
                         <select id="industry">
                             <option>Any Industry</option>
+                            <option>Consulting</option>
+                            <option>Manufacturing</option>
+                            <option>Aerospace/Aviation</option>
+                            <option>Finance</option>
+                            <option>Healthcare</option>
+                            <option>Tech</option>
                         </select>
                         <label for="sector">SECTOR</label>
                         <select id="sector">
@@ -154,6 +160,14 @@
                         <label for="ethnicity">ETHNICITY</label>
                         <select id="ethnicity">
                             <option>Select all that apply</option>
+                            <option>White</option>
+                            <option>Hispanic</option>
+                            <option>Black</option>
+                            <option>Asian</option>
+                            <option>Native American</option>
+                            <option>Pacific Islander</option>
+                            <option>Middle Eastern</option>
+                            <option>Other</option>
                         </select>
                 </div>
                 <div class="form-row">
