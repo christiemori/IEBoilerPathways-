@@ -156,7 +156,6 @@
                             <option>Any Sector</option>
                         </select>
                 </div>
-
                 <div class="form-row">
                         <label for="gender">GENDER</label>
                         <select id="gender">
@@ -179,7 +178,6 @@
                         </select>
                 </div>
                 <div class="form-row">
-                    <p>&nbsp;</p>
                 </div>
                 <div class="form-row">
                     <label for="degree1">DEGREE</label>
