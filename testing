@@ -80,10 +80,6 @@
         .search-btn:hover {
             background-color: #000;
         }
-        input[type="checkbox"] {
-            transform: scale(0.98);
-            margin-right: 5px;
-        }
     </style>
 </head>
 <body>
