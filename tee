@@ -81,7 +81,7 @@
             background-color: #000;
         }
         input[type="checkbox"] {
-            transform: scale(0.7);
+            transform: scale(0.95);
             margin-right: 5px;
 }
     </style>
